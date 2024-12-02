@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the list of software to install
-SOFTWARE="zsh ranger fzf kitty"
+SOFTWARE="curl zsh ranger fzf kitty"
 
 # Check for Linux distributions: Arch, Fedora, Ubuntu
 if [[ -f /etc/os-release ]]; then
@@ -31,4 +31,16 @@ else
     echo "Unable to detect OS. /etc/os-release not found."
 fi
 
+echo "get ohmyzsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "generating symlinks"
 source symlink.sh
+
+## plugins
+git clone https://github.com/Aloxaf/fzf-tab ~/.oh-my-zsh/custom/plugins/fzf-tab
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-completions.git ~/.oh-my-zsh/custom/plugins/zsh-completions
+## theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
