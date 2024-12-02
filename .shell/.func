@@ -1,0 +1,33 @@
+function tree() {
+  if [ "$2" ];
+  then
+    exa --tree --level="$1" "$2"
+  else
+    exa --tree --level="$1" ./
+  fi }
+
+
+function kill_port() {
+    local port=$1
+    local pid=$(lsof -i :$port | awk 'NR==2{print$2}')
+
+    if [ -n "$pid" ]; then
+      echo "killing: $pid @ port $port"
+      kill $pid
+    else
+      echo "no prcess on port $port"
+    fi
+  }
+
+function cpyvenv() {
+    local version=$1
+    pyenv virtualenv "$version" venv
+}
+
+fhelp() {
+  $1 --help | ff
+}
+
+fff() {
+    rg --ignore-case --line-number "$1" | ff --preview "echo {}"
+}
