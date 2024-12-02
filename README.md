@@ -1,3 +1,3 @@
 - clone this repo including submopdules
-  ```git clone --recurse-submodules <repository_url>```
+  ```git clone --recurse-submodules git@github.com:JohannesSchnell/dotfiles.git```
 - run setup.sh
