@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the list of software to install
-SOFTWARE="curl zsh ranger fzf kitty"
+SOFTWARE="curl zsh ranger fzf kitty exa"
 
 # Check for Linux distributions: Arch, Fedora, Ubuntu
 if [[ -f /etc/os-release ]]; then
@@ -44,3 +44,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 git clone https://github.com/zsh-users/zsh-completions.git ~/.oh-my-zsh/custom/plugins/zsh-completions
 ## theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+
+
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/Hack.zip
+unzip Hack.zip -d ~/.local/share/fonts/
+fc-cache -fv
