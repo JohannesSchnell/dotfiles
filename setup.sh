@@ -13,7 +13,7 @@ if [[ -f /etc/os-release ]]; then
         sudo pacman -Syu --noconfirm $SOFTWARE
 
     # Check if it's Fedora
-    elif [[ "$ID" == "fedora" ]]; then
+    elif [[ "$ID_LIKE" == "fedora" ]]; then
         echo "Fedora detected. Installing packages..."
         sudo dnf install -y $SOFTWARE
 
