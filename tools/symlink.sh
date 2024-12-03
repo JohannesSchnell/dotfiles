@@ -9,5 +9,5 @@ ln -sf $(pwd)/.shell/.bashrc $HOME/.bashrc
 ln -sf $(pwd)/.shell $HOME/.shell
 
 #config
-ln -sf $(pwd)/.config/kitty $HOME/.config/kitty
-ln -sf $(pwd)/.config/ranger $HOME/.config/ranger
+ln -sf $(pwd)/.config/kitty $HOME/.config/
+ln -sf $(pwd)/.config/ranger $HOME/.config/
