@@ -44,6 +44,11 @@ git clone https://github.com/zsh-users/zsh-completions.git ~/.oh-my-zsh/custom/p
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 
 
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/Hack.zip
-unzip Hack.zip -d ~/.local/share/fonts/
-fc-cache -fv
+#install fonts
+if fc-list | grep -q "Hack Nerd Font"; then
+    echo "$FONT_NAME is already installed."
+else
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/Hack.zip
+    unzip Hack.zip -d ~/.local/share/fonts/
+    fc-cache -fv
+fi
