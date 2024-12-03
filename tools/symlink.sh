@@ -6,8 +6,8 @@ ln -sf $(pwd)/.shell/.zshrc $HOME/.zshrc
 ln -sf $(pwd)/.shell/.bashrc $HOME/.bashrc
 
 #shell scripts
-ln -sf $(pwd)/.shell $HOME/.shell
+ln -snf $(pwd)/.shell $HOME/.shell
 
 #config
-ln -sf $(pwd)/.config/kitty $HOME/.config/
-ln -sf $(pwd)/.config/ranger $HOME/.config/
+ln -snf $(pwd)/.config/kitty $HOME/.config/
+ln -snf $(pwd)/.config/ranger $HOME/.config/
