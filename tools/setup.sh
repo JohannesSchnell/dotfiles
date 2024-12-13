@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the list of software to install
-SOFTWARE="curl zsh ranger fzf kitty exa bat"
+SOFTWARE="curl zsh ranger fzf kitty exa bat i3 rofi picom polybar"
 
 # Check for Linux distributions: Arch, Fedora, Ubuntu
 if [[ -f /etc/os-release ]]; then
