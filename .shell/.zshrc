@@ -126,3 +126,5 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview-height 20
 zstyle ':fzf-tab:complete:l*' fzf-preview 'exa -abhHliS --color=always --group-directories-first --icons $realpath'
 
 
+export PATH=$HOME/.local/bin:$PATH
+
