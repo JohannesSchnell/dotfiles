@@ -14,7 +14,7 @@ set $mod Mod4
 exec_always --no-startup-id picom
 exec_always --no-startup-id killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
-exec_always feh --bg-scale /home/hansmann/Pictures/macdt.jpg     
+exec_always feh --bg-scale ~/Bilder/desktop/pexels-catiamatos-1072179.jpg    
 
 bindsym $mod+space exec rofi -show
 bindsym $mod+Shift+x exec lichess

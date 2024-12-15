@@ -13,6 +13,13 @@ alias bytefm="vlc http://www.byte.fm/stream/bytefmhq.m3u -d"
 alias icat="kitty +kitten icat"
 
 #software
+#nvim
+alias v='kickstart'
+alias lazyvim='NVIM_APPNAME=lazyvim nvim'
+alias nvchad='NVIM_APPNAME=nvchad nvim'
+alias kickstart='NVIM_APPNAME=kickstart nvim'
+alias astrovim='NVIM_APPNAME=astrovim nvim'
+alias lunarvim='NVIM_APPNAME=lunarvim nvim'
 #panoply
 alias panoply="sh /work/netCDF/PanoplyJ-5.2.3/PanoplyJ/panoply.sh"
 #toolsUI
@@ -27,6 +34,8 @@ alias dcl="docker compose logs -f"
 alias dce="docker compose exec"
 alias dcr="docker compose restart"
 alias dcb="docker compose build"
+#git
+alias gla="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --all"
 #python
 alias cvenv="python3 -m venv .venv"
 alias avenv="source ./venv/bin/activate"

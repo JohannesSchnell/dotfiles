@@ -8,7 +8,7 @@ if [[ -f /etc/os-release ]]; then
     . /etc/os-release
 
     # Check if it's Arch
-    if [[ "$ID" == "arch" ]]; then
+    if [[ "$ID_LIKE" == "arch" ]]; then
         echo "Arch Linux detected. Installing packages..."
         sudo pacman -Syu --noconfirm $SOFTWARE
 
